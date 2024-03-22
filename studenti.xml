@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entitati>
-    <student ID="44">
-        <Nume>Cineva</Nume>
-        <Grupa>931</Grupa>
+    <student ID="1">
+        <Nume>Ana</Nume>
+        <Grupa>221</Grupa>
     </student>
     <student ID="2">
         <Nume>Maria</Nume>

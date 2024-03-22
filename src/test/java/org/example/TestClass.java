@@ -15,13 +15,12 @@ import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.ValidationException;
 
-@RunWith(JUnit4.class)
 public class TestClass extends TestCase {
 
     public static Service service;
 
-    @BeforeAll
-    public static void setup() {
+    @Override
+    public void setUp() {
         StudentValidator studentValidator = new StudentValidator();
         TemaValidator temaValidator = new TemaValidator();
         NotaValidator notaValidator = new NotaValidator();
@@ -34,7 +33,7 @@ public class TestClass extends TestCase {
     }
 
     @Test
-    public void addStudentValidData() {
+    public void testAddStudentValidData() {
         Student student = new Student("test", "nume_1", 931);
 
         int initialLen = 0;
@@ -62,7 +61,7 @@ public class TestClass extends TestCase {
     }
 
     @Test
-    public void addStudentInvalidID() {
+    public void testAddStudentInvalidID() {
         Student student = new Student("", "nume_1", 931);
 
         int initialLen = 0;
