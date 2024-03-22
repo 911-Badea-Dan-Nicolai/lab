@@ -2,10 +2,7 @@ package org.example;
 
 import domain.Student;
 import junit.framework.TestCase;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import repository.NotaXMLRepository;
 import repository.StudentXMLRepository;
 import repository.TemaXMLRepository;
@@ -61,8 +58,138 @@ public class TestClass extends TestCase {
     }
 
     @Test
-    public void testAddStudentInvalidID() {
+    public void testAddStudentInvalidIDEmpty() {
         Student student = new Student("", "nume_1", 931);
+
+        int initialLen = 0;
+
+        for(Student s: service.findAllStudents()) {
+            initialLen++;
+        }
+
+        try {
+            service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
+        } catch (Exception e) {
+            System.out.println(e);
+            assertFalse(true);
+        }
+
+        int len = 0;
+
+        for(Student s: service.findAllStudents()) {
+            len++;
+        }
+
+        assert(initialLen == len);
+    }
+
+    @Test
+    public void testAddStudentInvalidIDNull() {
+        Student student = new Student(null, "nume_1", 931);
+
+        int initialLen = 0;
+
+        for(Student s: service.findAllStudents()) {
+            initialLen++;
+        }
+
+        try {
+            service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
+        } catch (Exception e) {
+            System.out.println(e);
+            assertFalse(true);
+        }
+
+        int len = 0;
+
+        for(Student s: service.findAllStudents()) {
+            len++;
+        }
+
+        assert(initialLen == len);
+    }
+
+    @Test
+    public void testAddStudentInvalidNameEmpty() {
+        Student student = new Student("test", "", 931);
+
+        int initialLen = 0;
+
+        for(Student s: service.findAllStudents()) {
+            initialLen++;
+        }
+
+        try {
+            service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
+        } catch (Exception e) {
+            System.out.println(e);
+            assertFalse(true);
+        }
+
+        int len = 0;
+
+        for(Student s: service.findAllStudents()) {
+            len++;
+        }
+
+        assert(initialLen == len);
+    }
+
+    @Test
+    public void testAddStudentInvalidNameNull() {
+        Student student = new Student("test", null, 931);
+
+        int initialLen = 0;
+
+        for(Student s: service.findAllStudents()) {
+            initialLen++;
+        }
+
+        try {
+            service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
+        } catch (Exception e) {
+            System.out.println(e);
+            assertFalse(true);
+        }
+
+        int len = 0;
+
+        for(Student s: service.findAllStudents()) {
+            len++;
+        }
+
+        assert(initialLen == len);
+    }
+
+    @Test
+    public void testAddStudentInvalidGroupSmall() {
+        Student student = new Student("test", "nume_1", 110);
+
+        int initialLen = 0;
+
+        for(Student s: service.findAllStudents()) {
+            initialLen++;
+        }
+
+        try {
+            service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
+        } catch (Exception e) {
+            System.out.println(e);
+            assertFalse(true);
+        }
+
+        int len = 0;
+
+        for(Student s: service.findAllStudents()) {
+            len++;
+        }
+
+        assert(initialLen == len);
+    }
+
+    @Test
+    public void testAddStudentInvalidGroupBig() {
+        Student student = new Student("test", "nume_1", 938);
 
         int initialLen = 0;
 
