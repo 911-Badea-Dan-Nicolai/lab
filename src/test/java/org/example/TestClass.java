@@ -2,6 +2,7 @@ package org.example;
 
 import domain.Student;
 import junit.framework.TestCase;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import repository.NotaXMLRepository;
 import repository.StudentXMLRepository;
@@ -16,7 +17,7 @@ public class TestClass extends TestCase {
 
     public static Service service;
 
-    @Override
+    @BeforeEach
     public void setUp() {
         StudentValidator studentValidator = new StudentValidator();
         TemaValidator temaValidator = new TemaValidator();
