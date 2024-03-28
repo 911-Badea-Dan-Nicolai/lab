@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.TestClass" time="0.131" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.TestClass" time="0.177" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\catal\.jdks\corretto-17.0.10\bin"/>
-    <property name="sun.java.command" value="C:\Users\catal\AppData\Local\Temp\surefire3694151879832652324\surefirebooter18156344768755087438.jar C:\Users\catal\AppData\Local\Temp\surefire3694151879832652324 2024-03-26T16-14-55_276-jvmRun1 surefire3053971584680330900tmp surefire_06135847873646624352tmp"/>
+    <property name="sun.java.command" value="C:\Users\catal\AppData\Local\Temp\surefire8388786041387160587\surefirebooter9914814387592867155.jar C:\Users\catal\AppData\Local\Temp\surefire8388786041387160587 2024-03-28T18-09-22_597-jvmRun1 surefire13346133284390463346tmp surefire_018266291240929090102tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\catal\OneDrive\Desktop\Facultate\Semestrul6\SSVV\lab\target\test-classes;C:\Users\catal\OneDrive\Desktop\Facultate\Semestrul6\SSVV\lab\target\classes;C:\Users\catal\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\catal\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\catal\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\catal\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\catal\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\catal\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\catal\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\catal\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\catal\AppData\Local\Temp\surefire3694151879832652324\surefirebooter18156344768755087438.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\catal\AppData\Local\Temp\surefire8388786041387160587\surefirebooter9914814387592867155.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.10+7-LTS"/>
@@ -59,12 +59,27 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAddStudentInvalidGroupSmall" classname="org.example.TestClass" time="0.088">
+  <testcase name="testAddStudentInvalidGroupSmall" classname="org.example.TestClass" time="0.079">
     <system-out><![CDATA[Entitatea nu este valida! 
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAddStudentInvalidNameEmpty" classname="org.example.TestClass" time="0.01">
+  <testcase name="testAddStudentInvalidNameEmpty" classname="org.example.TestClass" time="0.006">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddTemaInvalidDataNullDescriere" classname="org.example.TestClass" time="0.006">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddTemaInvalidDataEmptyStringId" classname="org.example.TestClass" time="0.004">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddTemaInvalidDataPrimireSmaller" classname="org.example.TestClass" time="0.006">
     <system-out><![CDATA[Entitatea nu este valida! 
 
 ]]></system-out>
@@ -74,18 +89,50 @@
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAddStudentValidData" classname="org.example.TestClass" time="0.005"/>
-  <testcase name="testAddStudentInvalidIDNull" classname="org.example.TestClass" time="0.004">
+  <testcase name="testAddTemaInvalidDataDeadlineSmaller" classname="org.example.TestClass" time="0.005">
     <system-out><![CDATA[Entitatea nu este valida! 
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAddStudentInvalidIDEmpty" classname="org.example.TestClass" time="0.004">
+  <testcase name="testAddTemaInvalidDataEmptyStringDescriere" classname="org.example.TestClass" time="0.004">
     <system-out><![CDATA[Entitatea nu este valida! 
 
 ]]></system-out>
   </testcase>
-  <testcase name="testAddStudentInvalidNameNull" classname="org.example.TestClass" time="0.003">
+  <testcase name="testAddStudentValidData" classname="org.example.TestClass" time="0.006"/>
+  <testcase name="testAddStudentInvalidIDNull" classname="org.example.TestClass" time="0.005">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddTemaValidData" classname="org.example.TestClass" time="0.003"/>
+  <testcase name="testAddStudentInvalidIDEmpty" classname="org.example.TestClass" time="0.003">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddTemaInvalidDataNullId" classname="org.example.TestClass" time="0.005">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddStudentInvalidNameNull" classname="org.example.TestClass" time="0.005">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddTemaInvalidDataPrimireBigger" classname="org.example.TestClass" time="0.005">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddTemaInvalidDataDuplicate" classname="org.example.TestClass" time="0.004"/>
+  <testcase name="testAddTemaInvalidDataDeadlineBigger" classname="org.example.TestClass" time="0.004">
+    <system-out><![CDATA[Entitatea nu este valida! 
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAddTemaInvalidPrimireBiggerThanDeadline" classname="org.example.TestClass" time="0.003">
     <system-out><![CDATA[Entitatea nu este valida! 
 
 ]]></system-out>

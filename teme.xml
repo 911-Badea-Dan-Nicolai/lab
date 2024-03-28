@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entitati>
+    <tema ID="100">
+        <Descriere>test</Descriere>
+        <Deadline>12</Deadline>
+        <Startline>1</Startline>
+    </tema>
     <tema ID="2">
         <Descriere>XML</Descriere>
         <Deadline>8</Deadline>
