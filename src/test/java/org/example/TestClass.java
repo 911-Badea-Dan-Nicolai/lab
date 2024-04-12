@@ -42,7 +42,6 @@ public class TestClass extends TestCase {
             service.saveTema(nrTema, descriere, deadline, primire);
             assert(true);
         } catch (ValidationException exception) {
-            System.out.println("Validation exception: " + exception.getMessage());
             assert(false);
         }
     }
@@ -57,7 +56,6 @@ public class TestClass extends TestCase {
             int response = service.saveTema(nrTema, descriere, deadline, primire);
             assert(0 == response);
         } catch (ValidationException exception) {
-            System.out.println("Validation exception: " + exception.getMessage());
             assert(true);
         }
     }
@@ -71,7 +69,6 @@ public class TestClass extends TestCase {
         try {
             service.saveTema(nrTema, descriere, deadline, primire);
         } catch (ValidationException exception) {
-            System.out.println("Validation exception: " + exception.getMessage());
             assert(true);
         }
     }
@@ -85,7 +82,6 @@ public class TestClass extends TestCase {
         try {
             service.saveTema(nrTema, descriere, deadline, primire);
         } catch (ValidationException exception) {
-            System.out.println("Validation exception: " + exception.getMessage());
             assert(true);
         }
     }
@@ -100,7 +96,6 @@ public class TestClass extends TestCase {
         try{
             service.saveTema(nrTema, descriere, deadline, primire);
         }catch (ValidationException ve){
-            System.out.println("Validation Exception: " + ve.getMessage());
             assert(true);
         }
     }
@@ -115,7 +110,6 @@ public class TestClass extends TestCase {
         try{
             service.saveTema(nrTema, descriere, deadline, primire);
         }catch (ValidationException ve){
-            System.out.println("Validation Exception: " + ve.getMessage());
             assert(true);
         }
     }
@@ -130,7 +124,6 @@ public class TestClass extends TestCase {
         try{
             service.saveTema(nrTema, descriere, deadline, primire);
         }catch (ValidationException ve){
-            System.out.println("Validation Exception: " + ve.getMessage());
             assert(true);
         }
     }
@@ -145,7 +138,6 @@ public class TestClass extends TestCase {
         try{
             service.saveTema(nrTema, descriere, deadline, primire);
         }catch (ValidationException ve){
-            System.out.println("Validation Exception: " + ve.getMessage());
             assert(true);
 
         }
@@ -161,7 +153,6 @@ public class TestClass extends TestCase {
         try{
             service.saveTema(nrTema, descriere, deadline, primire);
         }catch (ValidationException ve){
-            System.out.println("Validation Exception: " + ve.getMessage());
             assert(true);
         }
     }
@@ -176,7 +167,6 @@ public class TestClass extends TestCase {
         try{
             service.saveTema(nrTema, descriere, deadline, primire);
         }catch (ValidationException ve){
-            System.out.println("Validation Exception: " + ve.getMessage());
             assert(true);
 
         }
@@ -192,7 +182,6 @@ public class TestClass extends TestCase {
         try{
             service.saveTema(nrTema, descriere, deadline, primire);
         }catch (ValidationException ve){
-            System.out.println("Validation Exception: " + ve.getMessage());
             assert(true);
 
         }
@@ -212,7 +201,6 @@ public class TestClass extends TestCase {
         try {
             service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
         } catch (ValidationException e) {
-            System.out.println(e);
             assertFalse(true);
         }
 
@@ -240,7 +228,6 @@ public class TestClass extends TestCase {
         try {
             service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
         } catch (Exception e) {
-            System.out.println(e);
             assertFalse(true);
         }
 
@@ -266,7 +253,6 @@ public class TestClass extends TestCase {
         try {
             service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
         } catch (Exception e) {
-            System.out.println(e);
             assertFalse(true);
         }
 
@@ -292,7 +278,6 @@ public class TestClass extends TestCase {
         try {
             service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
         } catch (Exception e) {
-            System.out.println(e);
             assertFalse(true);
         }
 
@@ -318,7 +303,6 @@ public class TestClass extends TestCase {
         try {
             service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
         } catch (Exception e) {
-            System.out.println(e);
             assertFalse(true);
         }
 
@@ -344,7 +328,6 @@ public class TestClass extends TestCase {
         try {
             service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
         } catch (Exception e) {
-            System.out.println(e);
             assertFalse(true);
         }
 
@@ -370,7 +353,6 @@ public class TestClass extends TestCase {
         try {
             service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
         } catch (Exception e) {
-            System.out.println(e);
             assertFalse(true);
         }
 

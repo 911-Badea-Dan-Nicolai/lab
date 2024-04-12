@@ -33,7 +33,7 @@ public class TestIntegration extends TestCase {
         TestIntegration.service = new Service(studentRepo, temaRepo, notaRepo);
     }
 
-    // White box testing
+    // In Class
     @Test
     public void testAddAssignmentInvalidDataDuplicate() {
         String nrTema = "100";
@@ -102,13 +102,41 @@ public class TestIntegration extends TestCase {
         Tema tema = new Tema("100", "Advanced Java", 15, 2);
         Nota nota = new Nota(new Pair("2", "101"), 9.5, 13, "Excellent work");
 
-        // Add student
         assertEquals(0, service.saveStudent(student.getID(), student.getNume(), student.getGrupa()));
 
-        // Add assignment
         assertEquals(1, service.saveTema(tema.getID(), tema.getDescriere(), tema.getDeadline(), tema.getStartline()));
 
-        // Add grade
         assertEquals(-1, service.saveNota(nota.getID().getObject1(), nota.getID().getObject2(), nota.getNota(), nota.getSaptamanaPredare(), nota.getFeedback()));
+    }
+
+    //Homework
+    @Test
+    public void testAddStudent() {
+        Student student = new Student("101", "Gica Hagi", 1001);
+        assertEquals(1, service.saveStudent(student.getID(), student.getNume(), student.getGrupa()));
+    }
+
+    @Test
+    public void testAddAssignmentWithStudent() {
+        Student student = new Student("20", "Beghe Ionut", 931);
+        service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
+
+        Tema tema = new Tema("200", "Software Engineering", 15, 1);
+        assertEquals(1, service.saveTema(tema.getID(), tema.getDescriere(), tema.getDeadline(), tema.getStartline()));
+        service.deleteStudent("20");
+    }
+
+    @Test
+    public void testAddGradeWithStudentAndAssignment() {
+        Student student = new Student("20", "Beghe Ionut", 931);
+        service.saveStudent(student.getID(), student.getNume(), student.getGrupa());
+
+        Tema tema = new Tema("300", "Database Systems", 14, 1);
+        service.saveTema(tema.getID(), tema.getDescriere(), tema.getDeadline(), tema.getStartline());
+
+        Nota nota = new Nota(new Pair("2", "100"), 9.5, 12, "Very well done");
+        assertEquals(0, service.saveNota(nota.getID().getObject1(), nota.getID().getObject2(), nota.getNota(), nota.getSaptamanaPredare(), nota.getFeedback()));
+        service.deleteStudent("20");
+        service.deleteTema("300");
     }
 }
